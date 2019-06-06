@@ -21,15 +21,15 @@ renamed as (
         ga_pageviews as pageviews,
         ga_unique_pageviews as unique_pageviews,
 
-        ga_avg_time_on_page as avg_time_on_page,
+        round(ga_avg_time_on_page, 2) as avg_time_on_page,
 
         ga_entrances as entrances,
-        ga_entrance_rate as entrance_rate,
+        round(ga_entrance_rate, 2) as entrance_rate,
 
-        ga_bounce_rate as bounce_rate,
+        round(ga_bounce_rate, 2) as bounce_rate,
         
         ga_exits as exits,
-        ga_exit_rate as exit_rate
+        round(ga_exit_rate, 2) as exit_rate
 
     from source
 
