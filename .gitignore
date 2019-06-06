@@ -1,0 +1,15 @@
+# dbt related
+logs/
+target/
+dbt_modules/
+profile/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.env.dev
