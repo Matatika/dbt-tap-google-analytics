@@ -5,8 +5,8 @@ WITH monthly_stats AS (
          SUM(users) as users,
          SUM(new_users) as new_users,
          SUM(sessions) as sessions,
-         AVG(bounce_rate) as bounce_rate,
-         AVG(avg_session_duration) as avg_session_duration
+         round(AVG(bounce_rate), 2) as bounce_rate,
+         round(AVG(avg_session_duration), 2) as avg_session_duration
  
      FROM {{ref('google_analytics_website_overview')}}
 
