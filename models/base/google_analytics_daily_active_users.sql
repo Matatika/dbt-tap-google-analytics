@@ -8,7 +8,7 @@ renamed as (
 
     select
         -- dimensions
-        ga_date as report_date,
+        ga_date::date as report_date,
 
         substring(ga_date from 1 for 4) as report_year,
         substring(ga_date from 5 for 2) as report_month,
