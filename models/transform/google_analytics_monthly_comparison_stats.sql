@@ -2,6 +2,8 @@ WITH monthly_stats AS (
      SELECT 
          report_year as year, 
          report_month as month,
+         date_trunc('month', MIN(report_date))::date as month_start,
+
          SUM(users) as users,
          SUM(new_users) as new_users,
          SUM(sessions) as sessions,
@@ -18,6 +20,7 @@ WITH monthly_stats AS (
 SELECT
     year, 
     month,
+    month_start,
  
     users,
     round( (users / lag(users) 
