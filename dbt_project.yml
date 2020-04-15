@@ -1,5 +1,5 @@
 name: 'tap_google_analytics'
-version: '0.0.2'
+version: '0.0.3'
 
 source-paths: ["models"]   # paths with source code to compile
 analysis-paths: ["analysis"] # path with analysis files which are compiled, but not run
