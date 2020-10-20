@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{var('schema')}}.two_weekly_active_users
+    select * from "{{var('schema')}}".two_weekly_active_users
 
 ),
 

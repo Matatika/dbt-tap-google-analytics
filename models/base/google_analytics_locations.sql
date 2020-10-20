@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{var('schema')}}.locations
+    select * from "{{var('schema')}}".locations
 
 ),
 

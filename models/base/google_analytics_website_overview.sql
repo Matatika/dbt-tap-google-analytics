@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{var('schema')}}.website_overview
+    select * from "{{var('schema')}}".website_overview
 
 ),
 

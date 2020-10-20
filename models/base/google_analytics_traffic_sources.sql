@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{var('schema')}}.traffic_sources
+    select * from "{{var('schema')}}".traffic_sources
 
 ),
 
