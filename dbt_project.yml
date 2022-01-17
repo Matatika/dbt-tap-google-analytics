@@ -1,5 +1,9 @@
 name: 'tap_google_analytics'
 version: '0.0.3'
+config-version: 2
+vars:
+  tap_google_analytics:
+    schema:                # the schema where the raw Google Analytics tables are located
 
 source-paths: ["models"]   # paths with source code to compile
 analysis-paths: ["analysis"] # path with analysis files which are compiled, but not run
@@ -14,6 +18,3 @@ models:
       materialized: table
     transform:
       materialized: table
-
-    vars:
-      schema:               # the schema where the raw Google Analytics tables are located
