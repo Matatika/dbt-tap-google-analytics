@@ -1,6 +1,6 @@
 with source as (
 
-    select * from "{{var('schema')}}".devices
+    select * from {{var('schema')}}.devices
 
 ),
 
@@ -8,11 +8,11 @@ renamed as (
 
     select
         -- dimensions
-        ga_date::date as report_date,
+        to_date(ga_date, 'YYYYMMDD') as report_date,
 
-        substring(ga_date from 1 for 4) as report_year,
-        substring(ga_date from 5 for 2) as report_month,
-        substring(ga_date from 7 for 2) as report_day,
+        substring(ga_date, 1, 4) as report_year,
+        substring(ga_date, 5, 2) as report_month,
+        substring(ga_date, 7, 2) as report_day,
 
         ga_device_category as device_category,
         ga_operating_system as operating_system,

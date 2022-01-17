@@ -1,6 +1,6 @@
 with source as (
 
-    select * from "{{var('schema')}}".daily_active_users
+    select * from {{var('schema')}}.daily_active_users
 
 ),
 
@@ -8,11 +8,11 @@ renamed as (
 
     select
         -- dimensions
-        ga_date::date as report_date,
+        to_date(ga_date, 'YYYYMMDD') as report_date,
 
-        substring(ga_date from 1 for 4) as report_year,
-        substring(ga_date from 5 for 2) as report_month,
-        substring(ga_date from 7 for 2) as report_day,
+        substring(ga_date, 1, 4) as report_year,
+        substring(ga_date, 5, 2) as report_month,
+        substring(ga_date, 7, 2) as report_day,
 
         -- metrics
         ga_1day_users as daily_active_users

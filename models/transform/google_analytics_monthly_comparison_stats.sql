@@ -2,7 +2,7 @@ WITH monthly_stats AS (
      SELECT 
          report_year as year, 
          report_month as month,
-         date_trunc('month', MIN(report_date))::date as month_start,
+         date(date_trunc('month', MIN(report_date))) as month_start,
 
          SUM(users) as users,
          SUM(new_users) as new_users,
