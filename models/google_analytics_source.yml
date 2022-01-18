@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: google_analytics_source
+    description: Google analytics tables created by our tap-google-analytics
+    schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"
+    tables: 
+      - name: daily_active_users
+        description: Source table of daily active user data
+      - name: devices
+        description: Source table of devices
+      - name: four_weekly_active_users
+        description: Source table of four weekly active user data
+      - name: locations
+        description: Source table of location data
+      - name: monthly_active_users
+        description: Source table of monthly active user data
+      - name: pages
+        description: Source table of pages data
+      - name: traffic_sources
+        description: Source table of traffic sources data
+      - name: two_weekly_active_users
+        description: Source table of two weekly active user data
+      - name: website_overview
+        description: Source table of website overview data
+      - name: weekly_active_users
+        description: Source table of weekly active user data

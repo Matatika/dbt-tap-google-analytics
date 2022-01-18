@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: google_analytics_active_user_stats
+    description: Active user stats for the day, week, two week, four week and monthly time frames
+  - name: google_analytics_daily_active_users
+    description: Daily total active users
+  - name: google_analytics_devices
+    description: Daily user stats by user devices
+  - name: google_analytics_four_weekly_active_users
+    description: Four weekly total active users
+  - name: google_analytics_locations
+    description: Daily user stats by user location
+  - name: google_analytics_monthly_active_users
+    description: Monthly total active users
+  - name: google_analytics_monthly_comparison_stats
+    description: Monthly user stats
+  - name: google_analytics_pages
+    description: Daily page stats
+  - name: google_analytics_traffic_sources
+    description: Daily traffic sources stats
+  - name: google_analytics_two_weekly_active_users
+    description: Two weekly total active users
+  - name: google_analytics_website_overview
+    description: Daily website overview stats
+  - name: google_analytics_weekly_active_users
+    description: Weekly total active users
+
+
