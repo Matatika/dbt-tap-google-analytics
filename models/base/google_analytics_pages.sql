@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{var('schema')}}.pages
+    select * from {{ source('google_analytics_source', 'pages') }}
 
 ),
 

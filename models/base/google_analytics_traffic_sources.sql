@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{var('schema')}}.traffic_sources
+    select * from {{ source('google_analytics_source', 'traffic_sources') }}
 
 ),
 
