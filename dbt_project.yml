@@ -1,9 +1,9 @@
 name: 'tap_google_analytics'
-version: '0.1.0'
+version: '0.1.1'
 config-version: 2
 vars:
   tap_google_analytics:
-    schema:                # the schema where the raw Google Analytics tables are located
+    schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"                
 
 source-paths: ["models"]   # paths with source code to compile
 analysis-paths: ["analysis"] # path with analysis files which are compiled, but not run
