@@ -26,15 +26,15 @@ renamed as (
         ga_new_users as new_users,
 
         ga_sessions as sessions,
-        round(ga_sessions_per_user, 2) as sessions_per_user,
-        round(ga_avg_session_duration, 2) as avg_session_duration,
+        round(cast(ga_sessions_per_user as numeric), 2) as sessions_per_user,
+        round(cast(ga_avg_session_duration as numeric), 2) as avg_session_duration,
 
         ga_pageviews as pageviews,
-        round(ga_pageviews_per_session, 2) as pageviews_per_session,
-        round(ga_avg_time_on_page, 2) as avg_time_on_page,
+        round(cast(ga_pageviews_per_session as numeric), 2) as pageviews_per_session,
+        round(cast(ga_avg_time_on_page as numeric), 2) as avg_time_on_page,
 
-        round(ga_bounce_rate, 2) as bounce_rate,
-        round(ga_exit_rate, 2) as exit_rate
+        round(cast(ga_bounce_rate as numeric), 2) as bounce_rate,
+        round(cast(ga_exit_rate as numeric), 2) as exit_rate
 
     from source
 
