@@ -58,6 +58,13 @@ This package has been tested on Postgres and Snowflake.
 ## Cloud hosting and SaaS
 Deploy on the Matatika Platform within minutes. [www.matatika.com](https://www.matatika.com)
 
+## Usage with Meltano
+[Install Meltano](https://docs.meltano.com/#install-meltano), [create your Meltano project](https://docs.meltano.com/#create-your-meltano-project), and add the transform to your project:
+
+    ```
+    meltano add transform tap-google-analytics
+    ```
+
 ## Contributions
 
 Additional contributions to this package are very welcome! Please create issues
