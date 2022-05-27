@@ -1,16 +1,16 @@
-name: 'tap_google_analytics'
-version: '0.3.0'
+name: tap_google_analytics
+version: "0.3.0"
 config-version: 2
 vars:
   tap_google_analytics:
-    schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"                
+    schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"
 
-model-paths: ["models"]   # paths with source code to compile
-analysis-paths: ["analysis"] # path with analysis files which are compiled, but not run
-target-path: "target"      # path for compiled code
-clean-targets: ["target"]  # directories removed by the clean task
-test-paths: ["test"]       # where to store test results
-seed-paths: ["data"]       # load CSVs from this directory with `dbt seed`
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+target-path: "target"
+clean-targets: ["target"]
+test-paths: ["test"]
+seed-paths: ["data"]
 
 models:
   tap_google_analytics:
