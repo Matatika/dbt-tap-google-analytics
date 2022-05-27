@@ -1,5 +1,7 @@
 name: tap_google_analytics
 version: "0.3.0"
+require-dbt-version: [">=1.0.0", "<2.0.0"]
+
 config-version: 2
 vars:
   tap_google_analytics:
